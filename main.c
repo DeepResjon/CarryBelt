@@ -1,22 +1,23 @@
 #include <stdio.h>
 int Carrybelt() {
-  float motors_capacity = 5.6;
+  float motor_capacity = 5.6; // in kg
   int motors;
   float total_weight;
-  printf("How many motors do we work with? \n");
+
+  printf("Enter the number of motors: \n ");
   scanf("%d", &motors);
 
-  printf("What is the total weight of packages? \n");
+  printf("Enter the amount of weight: \n"); // in kg
   scanf("%f", &total_weight);
 
-  float MAX_capacity = motors * motors_capacity;
+  int Max_capacity = motor_capacity * motors;
 
-  if (total_weight <= MAX_capacity) {
-    printf("YES! Carrybelt can do the work :D \n");
-  } else if (total_weight > MAX_capacity) {
-    printf("NO! Carrybelt can't do the work D: \n");
+  if (total_weight <= Max_capacity) {
+    printf("Yes! The carrybelt does the job :DD");
+  } else if (total_weight > Max_capacity) {
+    printf("No! The carrybelt can't to the job");
   }
+
   return 0;
 }
-
 int main() { Carrybelt(); }
